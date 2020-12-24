@@ -3,7 +3,7 @@ package com.maksim;
 import java.util.Scanner;
 
 public class TextManipulation {
-    public static void start() {
+    public void start() {
         System.out.print("Enter text: ");
         String text = enterString();
 
@@ -17,7 +17,7 @@ public class TextManipulation {
         System.out.printf("Original text: %s%nResulting text: %s%n", text, result);
     }
 
-    private static String manipulate(String text, String s, String t) {
+    private String manipulate(String text, String s, String t) {
         String[] words = text.split(" ");
         StringBuilder builder = new StringBuilder();
         for (String word : words) {
@@ -29,7 +29,7 @@ public class TextManipulation {
         return builder.toString();
     }
 
-    private static String enterString() {
+    private String enterString() {
         return new Scanner(System.in).nextLine();
     }
 }
